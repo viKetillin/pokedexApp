@@ -51,14 +51,6 @@
   --ion-color-danger-shade: #cf3c4f;
   --ion-color-danger-tint: #ed576b;
 
-  /** dark **/
-  --ion-color-dark: #222428;
-  --ion-color-dark-rgb: 34, 36, 40;
-  --ion-color-dark-contrast: #ffffff;
-  --ion-color-dark-contrast-rgb: 255, 255, 255;
-  --ion-color-dark-shade: #1e2023;
-  --ion-color-dark-tint: #383a3e;
-
   /** medium **/
   --ion-color-medium: #92949c;
   --ion-color-medium-rgb: 146, 148, 156;
@@ -206,8 +198,8 @@
   /** Poison **/
   --ion-color-poison: #b97fc9;
   --ion-color-poison-rgb: 185,127,201;
-  --ion-color-poison-contrast: #000000;
-  --ion-color-poison-contrast-rgb: 0,0,0;
+  --ion-color-poison-contrast: #fff;
+  --ion-color-poison-contrast-rgb: 255,255, 255;
   --ion-color-poison-shade: #a370b1;
   --ion-color-poison-tint: #c08cce;
 
