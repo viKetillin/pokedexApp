@@ -20,7 +20,9 @@
       <ion-label>
         <div>
           <h3 routerLink="/detalhe-pokemon">{{pokemons.nome}}</h3>
-          <ion-badge color="normal">{{pokemons.tipos}}</ion-badge>
+          <ion-badge *ngFor="let tipo of pokemons.tipos" [color]="tipo | lowercase">
+            {{tipo}}
+          </ion-badge>
         </div>
       </ion-label>
       <ion-chip color="success">

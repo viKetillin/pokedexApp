@@ -20,7 +20,7 @@ export class HomePage {
     numero: '004',
     nome : 'Charmander',
     foto: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/004.png',
-    tipos: 'Fire'
+    tipos: ['Fire']
   },
   {
     numero: '143',
