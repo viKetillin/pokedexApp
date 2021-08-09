@@ -1,0 +1,65 @@
+.imagemPokemon {
+  margin: 20px;
+  background-color: #f2f2f2;
+  border-radius: 5%;
+}
+
+.status {
+  font-size: 10px;
+  background-color: #a4a4a4;
+  margin: 20px;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.statusPokemon li {
+  background: #30a7d7;
+  height: 0.6em;
+  width: 100%;
+  margin-top: 2px;
+  position: relative;
+  list-style: none;
+}
+
+.divDescricao {
+  margin: 20px;
+}
+
+.descricao {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.divDescricao img {
+  margin-left: 5px;
+}
+
+.infoPokemon {
+  background-color: #30a7d7;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.tituloInfo {
+  color: white;
+  display: block;
+}
+
+.descricaoInfo {
+  font-weight: bold;
+}
+
+.tipo, .fraquezas{
+  margin: 20px;
+}
+
+.tipo span,
+.fraquezas span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+ion-badge {
+  margin-right: 12px;
+}
