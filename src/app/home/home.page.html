@@ -10,10 +10,10 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar placeholder="Buscar pokemons"></ion-searchbar>
+  <ion-searchbar (ionChange)="buscarPokemon($event)" placeholder="Buscar pokemons"></ion-searchbar>
 
   <ion-list lines="full" class="no-padding">
-    <ion-item *ngFor="let pokemons of listaPokemon">
+    <ion-item *ngFor="let pokemons of listaPokemonFiltrada">
       <ion-thumbnail slot="start">
         <img src="{{pokemons.foto}}">
       </ion-thumbnail>

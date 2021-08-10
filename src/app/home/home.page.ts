@@ -70,10 +70,23 @@ export class HomePage {
     foto: 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/849.png',
     tipos: ['Electric', 'Poison']
   }
-
-
 ];
 
-  constructor() {}
+listaPokemonFiltrada = [];
 
+  constructor() {
+    this.retornarPokemon();
+  }
+  retornarPokemon(): void{
+    this.listaPokemonFiltrada = this.listaPokemon;
+
+  }
+  buscarPokemon(evento): void{
+    this.retornarPokemon();
+    const busca: string = evento.target.value;
+
+    if(busca && busca.trim() !== ''){
+      this.listaPokemonFiltrada = this.listaPokemon.filter(pokemon => pokemon.nome.toLocaleLowerCase().includes(busca.toLowerCase()));
+    }
+  }
 }
