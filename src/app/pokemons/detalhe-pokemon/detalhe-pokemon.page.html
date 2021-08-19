@@ -1,0 +1,194 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{pokemon.nome}} Nº {{pokemon.numero}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="imagemPokemon">
+    <img src="{{pokemon.foto}}" />
+  </div>
+  <div class="status">
+    <div class="tituloStatus">Status</div>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <div class="statusPokemon">
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li style="background-color: white"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </div>
+        </ion-col>
+        <ion-col class="statusPokemon">
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ion-col>
+        <ion-col class="statusPokemon">
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ion-col>
+        <ion-col class="statusPokemon">
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ion-col>
+        <ion-col class="statusPokemon">
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ion-col>
+        <ion-col class="statusPokemon">
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li style="background-color: white"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col> HP </ion-col>
+        <ion-col> Attack </ion-col>
+        <ion-col> Defense </ion-col>
+        <ion-col> Special Attack </ion-col>
+        <ion-col> Special Defense </ion-col>
+        <ion-col> Speed </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="divDescricao">
+    <span class="descricao"> {{pokemon.descricao}} </span>
+    <span>Versões:</span>
+    <img
+      src="../../assets/pokebolaAzul.png"
+      alt=""
+      style="height: 30px; vertical-align: middle"
+    />
+    <img
+      src="../../assets/pokebolaVermelha.png"
+      alt=""
+      style="height: 30px; vertical-align: middle"
+    />
+    <span></span>
+  </div>
+  <div class="infoPokemon">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <span class="tituloInfo">Altura</span>
+          <span class="descricaoInfo">{{pokemon.altura}}</span>
+        </ion-col>
+        <ion-col>
+          <span class="tituloInfo">Categoria</span>
+          <span class="descricaoInfo">{{pokemon.categoria}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <span class="tituloInfo">Peso</span>
+          <span class="descricaoInfo">{{pokemon.peso}}</span>
+        </ion-col>
+        <ion-col>
+          <span class="tituloInfo">Habilidades</span>
+          <span class="descricaoInfo">{{pokemon.habilidades}}</span>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col><span class="tituloInfo">Gênero</span>
+        <span>
+          <ion-icon name="female"></ion-icon>
+          <ion-icon name="male"></ion-icon>
+        </span>
+      </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="tipo">
+    <span>Tipo</span>
+    <ion-badge *ngFor="let tipo of pokemon.tipo" [color]="tipo | lowercase">
+      {{tipo}}
+    </ion-badge>
+  </div>
+
+  <div class="fraquezas">
+    <span>Fraquezas</span>
+    <ion-badge *ngFor="let fraquezas of pokemon.fraquezas" [color]="fraquezas | lowercase">
+      {{fraquezas}}
+    </ion-badge>
+  </div>
+</ion-content>

@@ -12,14 +12,14 @@
 <ion-content [fullscreen]="true">
   <ion-searchbar (ionChange)="buscarPokemon($event)" placeholder="Buscar pokemons"></ion-searchbar>
 
-  <ion-list lines="full" class="no-padding">
-    <ion-item *ngFor="let pokemons of listaPokemonFiltrada">
+  <ion-list >
+    <ion-item *ngFor="let pokemons of listaPokemonFiltrada" lines="full" class="ion-no-padding" (click)="abrirPokemon(pokemons)">
       <ion-thumbnail slot="start">
         <img src="{{pokemons.foto}}">
       </ion-thumbnail>
       <ion-label>
         <div>
-          <h3 routerLink="/detalhe-pokemon">{{pokemons.nome}}</h3>
+          <h3 (click)="abrirPokemon(pokemons)">{{pokemons.nome}}</h3>
           <ion-badge *ngFor="let tipo of pokemons.tipos" [color]="tipo | lowercase">
             {{tipo}}
           </ion-badge>
