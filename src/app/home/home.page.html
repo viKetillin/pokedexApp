@@ -15,18 +15,18 @@
   <ion-list >
     <ion-item *ngFor="let pokemons of listaPokemonFiltrada" lines="full" class="ion-no-padding" (click)="abrirPokemon(pokemons)">
       <ion-thumbnail slot="start">
-        <img src="{{pokemons.foto}}">
+        <img [src]="pokemons.sprites.front_default">
       </ion-thumbnail>
       <ion-label>
         <div>
-          <h3 (click)="abrirPokemon(pokemons)">{{pokemons.nome}}</h3>
-          <ion-badge *ngFor="let tipo of pokemons.tipos" [color]="tipo | lowercase">
-            {{tipo}}
+          <h3 (click)="abrirPokemon(pokemons)">{{pokemons.name}}</h3>
+          <ion-badge *ngFor="let tipo of pokemons.types" [color]="tipo.type.name | lowercase">
+            {{tipo.type.name}}
           </ion-badge>
         </div>
       </ion-label>
-      <ion-chip color="success">
-        <ion-label>{{pokemons.numero}}</ion-label>
+      <ion-chip [color]="pokemons.types[0].type.name | lowercase">
+        <ion-label>{{pokemons.id}}</ion-label>
       </ion-chip>
     </ion-item>
   </ion-list>

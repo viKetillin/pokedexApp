@@ -1,3 +1,5 @@
+import { IPokemon } from './../models/IPokemon.model';
+import { DadosService } from './dados.service';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -25,5 +27,9 @@ export class PokemonService {
   buscarPokemons(offset = 0, limit = 10): Observable<IListaPokemon> {
     const urlConsulta = `${this.url}?limit=${limit}&offset=${offset}`;
     return this.http.get<IListaPokemon>(urlConsulta);
+  }
+
+  buscarUmPokemon(url: string): Observable<IPokemon>{
+    return this.http.get<IPokemon>(url);
   }
 }
