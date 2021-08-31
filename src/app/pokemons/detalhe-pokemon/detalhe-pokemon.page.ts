@@ -10,7 +10,7 @@ import { IPokemon } from './../../models/IPokemon.model';
 })
 export class DetalhePokemonPage implements OnInit {
   pokemon: IPokemon;
-
+  url = 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/';
   constructor(private dadosService: DadosService, private router: Router) {}
 
   ngOnInit() {

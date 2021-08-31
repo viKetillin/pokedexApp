@@ -19,9 +19,9 @@
       </ion-thumbnail>
       <ion-label>
         <div>
-          <h3 (click)="abrirPokemon(pokemons)">{{pokemons.name}}</h3>
+          <h3 (click)="abrirPokemon(pokemons)">{{pokemons.name | titlecase}}</h3>
           <ion-badge *ngFor="let tipo of pokemons.types" [color]="tipo.type.name | lowercase">
-            {{tipo.type.name}}
+            {{tipo.type.name | titlecase}}
           </ion-badge>
         </div>
       </ion-label>
@@ -30,4 +30,16 @@
       </ion-chip>
     </ion-item>
   </ion-list>
+
+  <ion-item>
+    <ion-button slot="start" color="dark" (click)="buscarPokemonAPI(offset - 10)">
+      <ion-icon slot="icon-only" name="chevron-back-circle"></ion-icon>
+    </ion-button>
+
+    <ion-label class="ion-text-center">{{totalPokemons}}</ion-label>
+
+    <ion-button slot="end" color="dark" (click)="buscarPokemonAPI(offset + 10)">
+      <ion-icon slot="icon-only" name="chevron-forward-circle"></ion-icon>
+    </ion-button>
+  </ion-item>
 </ion-content>

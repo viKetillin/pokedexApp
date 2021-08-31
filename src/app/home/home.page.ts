@@ -14,6 +14,10 @@ export class HomePage {
 
   listaPokemonFiltrada: IPokemon[] = [];
 
+  totalPokemons = 0; //Guarda o total de pokemons
+
+  offset = 0; //Utilizado para navegar entre as páginas
+
   constructor(
     private dadosService: DadosService,
     private router: Router,
@@ -23,6 +27,19 @@ export class HomePage {
   }
 
   retornarPokemon(): void {
+    //Ordenar os pokemons por id
+    this.listaPokemon.sort((a, b) => {
+      if (a.id > b.id) {
+        return 1;
+      }
+
+      if (a.id < b.id) {
+        return -1;
+      }
+
+      return 0;
+    });
+
     this.listaPokemonFiltrada = this.listaPokemon;
   }
   buscarPokemon(evento): void {
@@ -44,14 +61,18 @@ export class HomePage {
     this.router.navigateByUrl('/detalhes-pokemon');
   }
 
-  buscarPokemonAPI(): void {
-    this.pokemonService.buscarPokemons().subscribe((dadosRetorno) => {
+  buscarPokemonAPI(offset = 0): void {
+    this.offset = offset;
+    this.pokemonService.buscarPokemons(this.offset).subscribe((dadosRetorno) => {
       console.log(dadosRetorno);
+
+      this.totalPokemons = dadosRetorno.count; //Pega o total de pokemons da API
       for (const item of dadosRetorno.results) {
         this.pokemonService
           .buscarUmPokemon(item.url)
           .subscribe((dadosPokemon) => {
             this.listaPokemon.push(dadosPokemon);
+            this.retornarPokemon();
           });
       }
       this.retornarPokemon();
